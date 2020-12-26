@@ -4,7 +4,7 @@ let displayStatus = {
 	isFinalResult: false,
 	stillCalculating: true,
 	isOn: true,
-}
+};
 
 display.value = 0;
 
