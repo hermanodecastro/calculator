@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="./public/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="calculator">
+			<input type="text" id="display" class="display">
+			<button class="button non-numeric" onclick="onOffButton()">CE</button>
+			<button class="button non-numeric" onclick="clearButton()">AC</button>
+			<button class="button non-numeric" onclick="backButton()">BACK</button>
+			<button class="button non-numeric" onclick="operatorButton(this)">/</button>
+			<button class="button numeric" onclick="numericButton(this)">7</button>
+			<button class="button numeric" onclick="numericButton(this)">8</button>
+			<button class="button numeric" onclick="numericButton(this)">9</button>
+			<button class="button non-numeric" onclick="operatorButton(this)">x</button>
+			<button class="button numeric" onclick="numericButton(this)">4</button>
+			<button class="button numeric" onclick="numericButton(this)">6</button>
+			<button class="button numeric" onclick="numericButton(this)">5</button>
+			<button class="button non-numeric" onclick="operatorButton(this)">-</button>
+			<button class="button numeric" onclick="numericButton(this)">1</button>
+			<button class="button numeric" onclick="numericButton(this)">2</button>
+			<button class="button numeric" onclick="numericButton(this)">3</button>
+			<button class="button non-numeric" onclick="operatorButton(this)">+</button>
+			<button class="button-zero" onclick="numericButton(this)">0</button>
+			<button class="button numeric" onclick="dotButton(this)">.</button>
+			<button class="button equals" onclick="equalsButton()">=</button>	
+		</div>
+	</div>
+	<script src="./public/js/calculator.js"></script>
+</body>
+</html>
+
