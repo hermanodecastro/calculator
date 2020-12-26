@@ -41,11 +41,8 @@ function operatorButton(button) {
 }
 
 function dotButton(button) {
-	if(displayStatus.isOn) {
-		let lastIndex = display.value.length - 1;
-		if(display.value[lastIndex] != ".") {
-			display.value += button.innerHTML;
-		}
+	if(!dotHasAlreadyBeenUsed(display.value)) {
+		display.value += button.innerHTML;
 	}
 }
 
@@ -80,7 +77,6 @@ function equalsButton() {
 		if(isAnOperator(display.value[lastNonEmptyIndex])) {
 			display.value = display.value.slice(0, -2);
 		}
-		console.log(display.value.replace(/[x]/g, "*"));
 		let result = eval(display.value.replace(/[x]/g, "*"));
 		display.value = result;
 		displayStatus.isFinalResult = true;
@@ -90,6 +86,22 @@ function equalsButton() {
 
 function isAnOperator(lastCharacter) {
 	if(lastCharacter == "x" || lastCharacter == "/" || lastCharacter == "+" || lastCharacter == "-") {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function dotHasAlreadyBeenUsed(expression) {
+	let found = false;
+	let i = expression.length - 1;
+	while(!found && i >= 0 && expression[i] != " ") {
+		if(expression[i] == ".") {
+			found = true;
+		}
+		i--;
+	}
+	if(found) {
 		return true;
 	} else {
 		return false;
