@@ -1,7 +1,6 @@
 # Calculator
-https://img.shields.io/github/license/hermanodecastro/calculator
+![GitHub](https://img.shields.io/github/license/hermanodecastro/calculator)
+> A simple calculator made in HTML + CSS + JS
 
-A simple calculator made in HTML + CSS + JS
-
-You can view it at https://hermanodecastro.github.io/calculator/
+### You can view it at https://hermanodecastro.github.io/calculator/
 
