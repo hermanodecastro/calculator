@@ -77,7 +77,7 @@ function equalsButton() {
 		if(isAnOperator(display.value[lastNonEmptyIndex])) {
 			display.value = display.value.slice(0, -2);
 		}
-		let result = eval(display.value.replace(/[x]/g, "*")).toFixed(6);
+		let result = eval(display.value.replace(/[x]/g, "*"));
 		display.value = result;
 		displayStatus.isFinalResult = true;
 		displayStatus.stillCalculating = false;
