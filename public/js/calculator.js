@@ -41,8 +41,10 @@ function operatorButton(button) {
 }
 
 function dotButton(button) {
-	if(!dotHasAlreadyBeenUsed(display.value)) {
-		display.value += button.innerHTML;
+	if(displayStatus.isOn) {
+		if(!dotHasAlreadyBeenUsed(display.value)) {
+			display.value += button.innerHTML;
+		}
 	}
 }
 
