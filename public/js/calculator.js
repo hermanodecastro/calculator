@@ -50,10 +50,12 @@ function dotButton(button) {
 
 function backButton() {
 	let lastIndex = display.value.length - 1;
-	if(display.value[lastIndex] == " ") {
-		display.value = display.value.slice(0, -2);
-	} else {
-		display.value = display.value.slice(0, -1);
+	if(display.value.length > 1) {
+		if(display.value[lastIndex] == " ") {
+			display.value = display.value.slice(0, -2);
+		} else {
+			display.value = display.value.slice(0, -1);
+		}
 	}
 }
 
